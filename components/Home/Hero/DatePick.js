@@ -9,21 +9,25 @@ import CheckInAndOut from "@/components/Other/CheckInAndOut";
 const DatePick = () => {
   const tHome = useTranslations("Home");
 
+  {
+    /*
+  <CheckInAndOut
+  translation={{
+    checkInTitle: tHome("checkInTitle"),
+    checkInPlaceholder: tHome("checkInPlaceholder"),
+    checkOutTitle: tHome("checkOutTitle"),
+    checkOutPlaceholder: tHome("checkOutPlaceholder"),
+  }}
+  />
+*/
+  }
+
   return (
     <MotionDiv
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
     >
-      {/* Check-in section */}
-      <CheckInAndOut
-        translation={{
-          checkInTitle: tHome("checkInTitle"),
-          checkInPlaceholder: tHome("checkInPlaceholder"),
-          checkOutTitle: tHome("checkOutTitle"),
-          checkOutPlaceholder: tHome("checkOutPlaceholder"),
-        }}
-      />
       <Link href="/contact">
         <Button className="w-full bg-primary-gradient text-base py-3 px-4 gap-2.5 flex items-center justify-center font-bold">
           <BookNowIcon className="w-4 h-4" />
