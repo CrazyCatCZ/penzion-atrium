@@ -1,6 +1,9 @@
 "use client";
 import { useState, useContext } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
+import { Button } from "@/components/UI/button";
+import { BookNowIcon } from "@/public/vectors/getIcons";
 
 import PriceOfRooms from "./PriceOfRooms";
 import NumberOfPeople from "../NumberOfPeople";
@@ -65,23 +68,6 @@ const ResponsiveFloor = () => {
           />
         </div>
         {/* If stay type is group disable the image and show amount of days input */}
-        {stayType === "group" ? (
-          <AmountOfDays
-            numberOfDays={numberOfDays}
-            setNumberOfDays={setNumberOfDays}
-            daysOptions={daysOptions}
-            containerClass={"flex flex-col mb-6"}
-            pClass={"md:text-2xl text-base font-bold text-indigo-900"}
-            divClass={"flex items-center gap-1"}
-          />
-        ) : (
-          <RoomImages
-            numberOfPeople={numberOfPeople}
-            divClass={
-              "h-[250px] min-[500px]:h-[400px] sm:h-[500px] md:h-[600px] relative group"
-            }
-          />
-        )}
 
         {/* Element 5 */}
         <DropdownButton
@@ -97,10 +83,30 @@ const ResponsiveFloor = () => {
           numberOfDays={numberOfDays}
           setNumberOfDays={setNumberOfDays}
           divClass={"flex flex-col gap-2 mt-4 w-full"}
-          buttonClass={
-            "bg-primary-gradient text-base py-3 px-4 gap-2.5 flex items-center justify-center font-bold w-full"
-          }
         />
+        {stayType !== "group" ? (
+          <RoomImages
+            numberOfPeople={numberOfPeople}
+            divClass={
+              "h-[250px] min-[500px]:h-[400px] sm:h-[500px] md:h-[600px] relative group"
+            }
+          />
+        ) : (
+          <AmountOfDays
+            numberOfDays={numberOfDays}
+            setNumberOfDays={setNumberOfDays}
+            daysOptions={daysOptions}
+            containerClass={"flex flex-col mb-6"}
+            pClass={"md:text-2xl text-base font-bold text-indigo-900"}
+            divClass={"flex items-center gap-1"}
+          />
+        )}
+        <Link className="w-full" href="/contact">
+          <Button className="mt-3 bg-primary-gradient text-base py-3 px-4 gap-2.5 flex items-center justify-center font-bold w-full">
+            <BookNowIcon className="w-4 h-4" />
+            {tAcc("bookNow")}
+          </Button>
+        </Link>
       </div>
     </div>
   );

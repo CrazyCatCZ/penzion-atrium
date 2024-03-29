@@ -1,14 +1,11 @@
 "use client";
-import { useState, useEffect, useContext } from "react";
-import { Link } from "@/navigation";
+import { useEffect, useContext } from "react";
 
 import { useTranslations } from "next-intl";
 
-import { Button } from "@/components/UI/button";
 import Dropdown from "@/components/Other/Dropdown";
 import { AppContext } from "@/app/[locale]/providers";
 
-import { BookNowIcon } from "@/public/vectors/getIcons";
 import { calculatePrice } from "@/utils/calculatePrice";
 
 const shortTermPeople = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -18,7 +15,6 @@ const groupPeople = ["10-19", "20+"];
 
 const DropdownButton = ({
   divClass,
-  buttonClass,
   numberOfPeople,
   setNumberOfPeople,
   peopleOptions,
@@ -100,12 +96,6 @@ const DropdownButton = ({
         onChange={(value) => onInputClick(value)}
         divClass={"relative"}
       />
-      <Link className="w-full" href="/contact">
-        <Button className={buttonClass}>
-          <BookNowIcon className="w-4 h-4" />
-          {tAcc("bookNow")}
-        </Button>
-      </Link>
     </div>
   );
 };
