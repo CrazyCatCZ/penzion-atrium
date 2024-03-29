@@ -12,7 +12,7 @@ const ImageGrid = () => {
           key={index}
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 + index * 0.25, ease: "easeInOut" }}
+          transition={{ delay: 1 + index * 0.15, ease: "easeInOut" }}
         >
           <ImageEffect
             img={item.image.src}
