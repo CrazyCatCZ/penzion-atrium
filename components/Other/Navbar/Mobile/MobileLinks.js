@@ -11,6 +11,8 @@ const MobileLinks = ({ tNavbar, setIsMenuOpen }) => {
   const notActiveLinkClass = "text-xl font-bold";
   const activeLinkClass = "text-xl font-bold text-indigo-900";
 
+  console.log(pathname);
+
   return (
     <nav className="gap-6 flex flex-col">
       <Link
@@ -22,7 +24,7 @@ const MobileLinks = ({ tNavbar, setIsMenuOpen }) => {
       </Link>
       <Link
         className={
-          pathname === "/rates" || pathname === "/rates"
+          pathname === "/rates" || pathname === "/cenik"
             ? activeLinkClass
             : notActiveLinkClass
         }
