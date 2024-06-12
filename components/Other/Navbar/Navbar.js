@@ -23,6 +23,7 @@ const Navbar = () => {
           accommodation: tNavbar("accommodation"),
           services: tNavbar("services"),
           surroundings: tNavbar("surroundings"),
+          gallery: tNavbar("gallery"),
           contact: tNavbar("contact"),
           bookNow: tNavbar("bookNow"),
         }}
@@ -37,6 +38,7 @@ const Navbar = () => {
             accommodation: tNavbar("accommodation"),
             services: tNavbar("services"),
             surroundings: tNavbar("surroundings"),
+            gallery: tNavbar("gallery"),
             contact: tNavbar("contact"),
             bookNow: tNavbar("bookNow"),
           }}
