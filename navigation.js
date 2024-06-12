@@ -6,13 +6,13 @@ export const localePrefix = "always"; // Default
 export const pathnames = {
   "/": "/",
 
-  "/accommodation": {
-    cs: "/ubytovani",
-    en: "/accommodation",
-  },
   "/rates": {
     cs: "/cenik",
     en: "/rates",
+  },
+  "/accommodation": {
+    cs: "/ubytovani",
+    en: "/accommodation",
   },
   "/services": {
     cs: "/sluzby",
@@ -25,6 +25,10 @@ export const pathnames = {
   "/contact": {
     cs: "/kontakt",
     en: "/contact",
+  },
+  "/gallery": {
+    cs: "/galerie",
+    en: "/gallery",
   },
   "/success": {
     cs: "/uspech",
