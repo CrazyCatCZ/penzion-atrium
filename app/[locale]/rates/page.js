@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import Table from "@/components/Rates/Table";
-import ContactUs from "@/components/Contact/ContactUs";
 
 export default function Page() {
   const tNavbar = useTranslations("Navbar");
