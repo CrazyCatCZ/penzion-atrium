@@ -39,6 +39,7 @@
 .sliderWrap .btnClose,
 .sliderWrap .btnPrev,
 .sliderWrap .btnNext {
+  font-size: 3em;
   position: fixed;
   cursor: pointer;
   opacity: 0.6;

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,9 +11,24 @@ import {
 
 import "./image-gallery.css";
 
-const WSPGallery = ({ galleryImages }) => {
+const ImageGallery = ({ galleryImages }) => {
+  const documentRef = useRef(document);
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
+
+  // Previous Image
+  const prevSlide = useCallback(() => {
+    slideNumber === 0
+      ? setSlideNumber(galleryImages.length - 1)
+      : setSlideNumber(slideNumber - 1);
+  }, [slideNumber, galleryImages]);
+
+  // Next Image
+  const nextSlide = useCallback(() => {
+    slideNumber + 1 === galleryImages.length
+      ? setSlideNumber(0)
+      : setSlideNumber(slideNumber + 1);
+  }, [slideNumber, galleryImages]);
 
   const handleOpenModal = (index) => {
     setSlideNumber(index);
@@ -25,19 +40,29 @@ const WSPGallery = ({ galleryImages }) => {
     setOpenModal(false);
   };
 
-  // Previous Image
-  const prevSlide = () => {
-    slideNumber === 0
-      ? setSlideNumber(galleryImages.length - 1)
-      : setSlideNumber(slideNumber - 1);
-  };
+  const handleKeyDown = useCallback(
+    (event) => {
+      const isPreviousSlide = event.key === "a" || event.key === "ArrowLeft";
+      const isNextSlide = event.key === "d" || event.key === "ArrowRight";
 
-  // Next Image
-  const nextSlide = () => {
-    slideNumber + 1 === galleryImages.length
-      ? setSlideNumber(0)
-      : setSlideNumber(slideNumber + 1);
-  };
+      if (event.key === "Escape") {
+        handleCloseModal();
+      } else if (isPreviousSlide) {
+        prevSlide();
+      } else if (isNextSlide) {
+        nextSlide();
+      }
+    },
+    [nextSlide, prevSlide]
+  );
+
+  useEffect(() => {
+    documentRef.current.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      documentRef.current.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
     <div>
@@ -88,4 +113,4 @@ const WSPGallery = ({ galleryImages }) => {
   );
 };
 
-export default WSPGallery;
+export default ImageGallery;
