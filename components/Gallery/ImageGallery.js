@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleChevronLeft,
@@ -9,21 +8,17 @@ import {
   faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
-import "./image-gallery.css";
-
 const ImageGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const documentRef = useRef(typeof document !== "undefined" ? document : null);
 
-  // Previous Image
   const prevSlide = useCallback(() => {
     setSlideNumber((prev) =>
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   }, [galleryImages]);
 
-  // Next Image
   const nextSlide = useCallback(() => {
     setSlideNumber((prev) =>
       prev + 1 === galleryImages.length ? 0 : prev + 1
@@ -35,21 +30,17 @@ const ImageGallery = ({ galleryImages }) => {
     setOpenModal(true);
   };
 
-  // Close Modal
   const handleCloseModal = () => {
     setOpenModal(false);
   };
 
   const handleKeyDown = useCallback(
     (event) => {
-      const isPreviousSlide = event.key === "a" || event.key === "ArrowLeft";
-      const isNextSlide = event.key === "d" || event.key === "ArrowRight";
-
       if (event.key === "Escape") {
         handleCloseModal();
-      } else if (isPreviousSlide) {
+      } else if (event.key === "a" || event.key === "ArrowLeft") {
         prevSlide();
-      } else if (isNextSlide) {
+      } else if (event.key === "d" || event.key === "ArrowRight") {
         nextSlide();
       }
     },
@@ -69,41 +60,45 @@ const ImageGallery = ({ galleryImages }) => {
   return (
     <div>
       {openModal && (
-        <div className="sliderWrap">
+        <div className="fixed inset-0 z-[999] bg-black bg-opacity-80 flex items-center justify-center">
           <FontAwesomeIcon
             icon={faCircleXmark}
-            className="btnClose"
+            className="absolute top-10 right-10 text-5xl text-white cursor-pointer opacity-60 hover:opacity-100"
             onClick={handleCloseModal}
           />
           <FontAwesomeIcon
             icon={faCircleChevronLeft}
-            className="btnPrev"
+            className="absolute left-10 text-5xl text-white cursor-pointer opacity-60 hover:opacity-100"
             onClick={prevSlide}
           />
           <FontAwesomeIcon
             icon={faCircleChevronRight}
-            className="btnNext"
+            className="absolute right-10 text-5xl text-white cursor-pointer opacity-60 hover:opacity-100"
             onClick={nextSlide}
           />
-          <div className="fullScreenImage">
+          <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] flex items-center justify-center">
             <Image
-              className="modalImage"
+              className="max-w-full max-h-full pointer-events-none select-none"
               src={galleryImages[slideNumber].src}
-              alt=""
+              alt={galleryImages[slideNumber].alt}
             />
           </div>
         </div>
       )}
 
-      <div className="galleryWrap">
+      <div className="flex flex-wrap gap-2.5 items-center justify-start max-w-full mx-auto">
         {galleryImages &&
           galleryImages.map((slide, index) => (
             <div
-              className="single"
+              className="w-[265px] cursor-pointer"
               key={index}
               onClick={() => handleOpenModal(index)}
             >
-              <Image src={slide.src} alt="" />
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                className="max-w-full transition-transform duration-200 hover:scale-105"
+              />
             </div>
           ))}
       </div>
