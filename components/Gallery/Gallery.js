@@ -1,4 +1,5 @@
 import GalleryData from "@/data/GalleryData";
+import GallerySection from "./GallerySection";
 import ImageGallery from "./ImageGallery";
 
 const Gallery = () => {
@@ -12,7 +13,14 @@ const Gallery = () => {
     ...toiletImages,
   ];
 
-  return <ImageGallery galleryImages={galleryImages} />;
+  return (
+    <div className="p-4">
+      <GallerySection title="Pokoje" images={roomImages} />
+      <GallerySection title="Kuchyň" images={kitchenImages} />
+      <GallerySection title="Exteriér" images={outsideImages} />
+      <GallerySection title="WC" images={toiletImages} />
+    </div>
+  );
 };
 
 export default Gallery;
