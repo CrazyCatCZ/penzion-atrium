@@ -12,23 +12,23 @@ import {
 import "./image-gallery.css";
 
 const ImageGallery = ({ galleryImages }) => {
-  const documentRef = useRef(document);
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
+  const documentRef = useRef(typeof document !== "undefined" ? document : null);
 
   // Previous Image
   const prevSlide = useCallback(() => {
-    slideNumber === 0
-      ? setSlideNumber(galleryImages.length - 1)
-      : setSlideNumber(slideNumber - 1);
-  }, [slideNumber, galleryImages]);
+    setSlideNumber((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  }, [galleryImages]);
 
   // Next Image
   const nextSlide = useCallback(() => {
-    slideNumber + 1 === galleryImages.length
-      ? setSlideNumber(0)
-      : setSlideNumber(slideNumber + 1);
-  }, [slideNumber, galleryImages]);
+    setSlideNumber((prev) =>
+      prev + 1 === galleryImages.length ? 0 : prev + 1
+    );
+  }, [galleryImages]);
 
   const handleOpenModal = (index) => {
     setSlideNumber(index);
@@ -57,11 +57,13 @@ const ImageGallery = ({ galleryImages }) => {
   );
 
   useEffect(() => {
-    documentRef.current.addEventListener("keydown", handleKeyDown);
+    if (documentRef.current) {
+      documentRef.current.addEventListener("keydown", handleKeyDown);
 
-    return () => {
-      documentRef.current.removeEventListener("keydown", handleKeyDown);
-    };
+      return () => {
+        documentRef.current.removeEventListener("keydown", handleKeyDown);
+      };
+    }
   }, [handleKeyDown]);
 
   return (
@@ -84,30 +86,26 @@ const ImageGallery = ({ galleryImages }) => {
             onClick={nextSlide}
           />
           <div className="fullScreenImage">
-            <Image src={galleryImages[slideNumber].src} alt="" />
+            <Image
+              className="modalImage"
+              src={galleryImages[slideNumber].src}
+              alt=""
+            />
           </div>
         </div>
       )}
 
-      {/* <br />
-      Current slide number:  {slideNumber}
-      <br />
-      Total Slides: {galleryImages.length}
-      <br /><br /> */}
-
       <div className="galleryWrap">
         {galleryImages &&
-          galleryImages.map((slide, index) => {
-            return (
-              <div
-                className="single"
-                key={index}
-                onClick={() => handleOpenModal(index)}
-              >
-                <Image src={slide.src} alt="" />
-              </div>
-            );
-          })}
+          galleryImages.map((slide, index) => (
+            <div
+              className="single"
+              key={index}
+              onClick={() => handleOpenModal(index)}
+            >
+              <Image src={slide.src} alt="" />
+            </div>
+          ))}
       </div>
     </div>
   );

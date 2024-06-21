@@ -13,7 +13,67 @@ import {
 } from "@/public/images/getImages";
 
 const GalleryData = () => {
-  const galleryImages = [
+  const roomImages = [
+    {
+      src: TrutnovCentrumImage,
+    },
+    {
+      src: KrkonoseImage,
+    },
+    {
+      src: AdrspachImage,
+    },
+    {
+      src: KuksImage,
+    },
+    {
+      src: ZooImage,
+    },
+    {
+      src: DolceImage,
+    },
+  ];
+  const kitchenImages = [
+    {
+      src: TrutnovCentrumImage,
+    },
+    {
+      src: KrkonoseImage,
+    },
+    {
+      src: AdrspachImage,
+    },
+    {
+      src: KuksImage,
+    },
+    {
+      src: ZooImage,
+    },
+    {
+      src: DolceImage,
+    },
+  ];
+  const outsideImages = [
+    {
+      src: TrutnovCentrumImage,
+    },
+    {
+      src: KrkonoseImage,
+    },
+    {
+      src: AdrspachImage,
+    },
+    {
+      src: KuksImage,
+    },
+    {
+      src: ZooImage,
+    },
+    {
+      src: DolceImage,
+    },
+  ];
+  const toiletImages = [
     {
       src: TrutnovCentrumImage,
     },
@@ -34,7 +94,7 @@ const GalleryData = () => {
     },
   ];
 
-  return { galleryImages };
+  return { roomImages, kitchenImages, outsideImages, toiletImages };
 };
 
 export default GalleryData;
