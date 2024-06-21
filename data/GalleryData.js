@@ -18,19 +18,19 @@ const GalleryData = () => {
       src: TrutnovCentrumImage,
     },
     {
-      src: KrkonoseImage,
+      src: TrutnovCentrumImage,
     },
     {
-      src: AdrspachImage,
+      src: TrutnovCentrumImage,
     },
     {
-      src: KuksImage,
+      src: TrutnovCentrumImage,
     },
     {
-      src: ZooImage,
+      src: TrutnovCentrumImage,
     },
     {
-      src: DolceImage,
+      src: TrutnovCentrumImage,
     },
   ];
   const kitchenImages = [

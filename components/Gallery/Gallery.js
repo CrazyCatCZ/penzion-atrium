@@ -14,7 +14,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="p-4">
+    <div>
       <GallerySection title="Pokoje" images={roomImages} />
       <GallerySection title="Kuchyň" images={kitchenImages} />
       <GallerySection title="Exteriér" images={outsideImages} />
