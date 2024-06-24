@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/UI/button.jsx";
 
 const RoomGuide = () => {
+  const tRates = useTranslations("Rates");
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleTableSize = () => {
@@ -28,24 +30,24 @@ const RoomGuide = () => {
               </thead>
               <tbody>
                 <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                  <td className="px-6 py-4">Koupelna</td>
-                  <td className="px-6 py-4">Sdílený</td>
-                  <td className="px-6 py-4">Soukromý</td>
+                  <td className="px-6 py-4">{tRates("bathroom")}</td>
+                  <td className="px-6 py-4">{tRates("shared")}</td>
+                  <td className="px-6 py-4">{tRates("private")}</td>
                 </tr>
                 <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                   <td className="px-6 py-4">TV</td>
-                  <td className="px-6 py-4">Sdílený</td>
-                  <td className="px-6 py-4">Soukromý</td>
+                  <td className="px-6 py-4">{tRates("shared")}</td>
+                  <td className="px-6 py-4">{tRates("private")}</td>
                 </tr>
                 <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                  <td className="px-6 py-4">Záchod</td>
-                  <td className="px-6 py-4">Sdílený</td>
-                  <td className="px-6 py-4">Soukromý</td>
+                  <td className="px-6 py-4">WC</td>
+                  <td className="px-6 py-4">{tRates("shared")}</td>
+                  <td className="px-6 py-4">{tRates("private")}</td>
                 </tr>
                 <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                  <td className="px-6 py-4">Lednice</td>
-                  <td className="px-6 py-4">Sdílený</td>
-                  <td className="px-6 py-4">Sdílený</td>
+                  <td className="px-6 py-4">{tRates("fridge")}</td>
+                  <td className="px-6 py-4">{tRates("shared")}</td>
+                  <td className="px-6 py-4">{tRates("shared")}</td>
                 </tr>
               </tbody>
             </table>
@@ -56,7 +58,7 @@ const RoomGuide = () => {
         onClick={toggleTableSize}
         className="m-auto bg-primary-gradient text-base py-3 px-4 gap-2.5 flex items-center justify-center font-bold"
       >
-        {isExpanded ? "Zavřít" : "Vysvětlení typy pokojů"}
+        {isExpanded ? tRates("close") : tRates("buttonExplanation")}
       </Button>
     </div>
   );

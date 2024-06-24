@@ -39,6 +39,16 @@
     "groups": "Group discounts and long stay discounts",
     "tv": "Kitchen and meeting room with TV"
   },
+  "Rates": {
+    "title": "Rates",
+    "buttonExplanation": "Explanation of room types",
+    "close": "Close",
+    "shared": "Shared",
+    "private": "Private",
+    "tourist": "Tourist",
+    "bathroom": "Bathroom",
+    "fridge": "Fridge"
+  },
   "Accommodation": {
     "title": "Accommodation",
     "roomTypeTitle": "Room Type",

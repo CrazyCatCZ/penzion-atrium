@@ -38,6 +38,16 @@
     "groups": "Slevy pro skupiny a dlouhodobě ubytované",
     "tv": "Kuchyňka a společenská místnost s televizí"
   },
+  "Rates": {
+    "title": "Ceník",
+    "buttonExplanation": "Vysvětlení typy pokojů",
+    "close": "Zavřít",
+    "shared": "Sdílený",
+    "private": "Soukromý",
+    "tourist": "Turist",
+    "bathroom": "Koupelna",
+    "fridge": "Lednice"
+  },
   "Accommodation": {
     "title": "Ubytování",
     "roomTypeTitle": "Typ Pokoje",
