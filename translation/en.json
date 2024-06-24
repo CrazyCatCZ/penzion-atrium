@@ -132,7 +132,10 @@
     "dolceDescription": "Dolce Pond is a peaceful and scenic spot near Trutnov, Czech Republic. It's a great place for nature lovers to enjoy activities like fishing, boating, and picnicking. Surrounded by beautiful forests, it's the perfect location to relax and connect with nature.. Is this how you imagined it? I can simplify the text so it can be more human"
   },
   "Gallery": {
-    "title": "Gallery"
+    "title": "Gallery",
+    "rooms": "Rooms",
+    "kitchen": "Kitchen",
+    "exterior": "Exterior"
   },
   "Contact": {
     "title": "Contact Us",

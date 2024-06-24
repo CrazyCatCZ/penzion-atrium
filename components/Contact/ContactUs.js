@@ -1,17 +1,11 @@
-import {
-  useTranslations,
-  useMessages,
-  NextIntlClientProvider,
-} from "next-intl";
+import { useTranslations } from "next-intl";
 
-import Form from "./Form/Form";
 import Details from "./Details";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import GoogleMaps from "./GoogleMaps";
 
 const ContactUs = () => {
-  const messages = useMessages();
   const tContact = useTranslations("Contact");
 
   return (
