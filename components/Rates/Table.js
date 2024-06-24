@@ -1,6 +1,7 @@
 import { prices } from "@/utils/prices";
 import { useTranslations } from "next-intl";
 
+import RoomGuide from "./RoomGuide";
 import TableGroup from "./TableGroup";
 import TableComponent from "./TableComponent";
 
@@ -13,28 +14,31 @@ const Table = () => {
   const longStandard = long.STANDARD;
 
   return (
-    <div className="md:columns-2 gap-10">
-      <TableComponent
-        type={short}
-        typeOfStay={tAcc("shortTermStayWithDays")}
-        standard={shortStandard}
-      />
-      <TableComponent
-        type={medium}
-        typeOfStay={tAcc("mediumTermStayWithDays")}
-        standard={mediumStandard}
-      />
-      <TableComponent
-        type={long}
-        typeOfStay={tAcc("longTermStayWithDays")}
-        standard={longStandard}
-      />
-      <TableGroup
-        type={group}
-        typeOfStay={tAcc("groupStayWithDays")}
-        standard={longStandard}
-      />
-    </div>
+    <>
+      <RoomGuide />
+      <div className="md:columns-2 gap-10">
+        <TableComponent
+          type={short}
+          typeOfStay={tAcc("shortTermStayWithDays")}
+          standard={shortStandard}
+        />
+        <TableComponent
+          type={medium}
+          typeOfStay={tAcc("mediumTermStayWithDays")}
+          standard={mediumStandard}
+        />
+        <TableComponent
+          type={long}
+          typeOfStay={tAcc("longTermStayWithDays")}
+          standard={longStandard}
+        />
+        <TableGroup
+          type={group}
+          typeOfStay={tAcc("groupStayWithDays")}
+          standard={longStandard}
+        />
+      </div>
+    </>
   );
 };
 
