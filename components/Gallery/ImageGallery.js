@@ -6,6 +6,7 @@ import {
   faCircleChevronLeft,
   faCircleChevronRight,
   faCircleXmark,
+  faCircleArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 const ImageGallery = ({ galleryImages }) => {
@@ -68,12 +69,12 @@ const ImageGallery = ({ galleryImages }) => {
           />
           <FontAwesomeIcon
             icon={faCircleChevronLeft}
-            className="absolute left-10 text-5xl text-white cursor-pointer opacity-60 hover:opacity-100"
+            className="absolute sm:left-10 left-8 sm:text-5xl text-4xl text-white cursor-pointer sm:opacity-60 hover:opacity-100"
             onClick={prevSlide}
           />
           <FontAwesomeIcon
             icon={faCircleChevronRight}
-            className="absolute right-10 text-5xl text-white cursor-pointer opacity-60 hover:opacity-100"
+            className="absolute sm:right-10 right-8 sm:text-5xl text-4xl text-white cursor-pointer sm:opacity-60 hover:opacity-100"
             onClick={nextSlide}
           />
           <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] flex items-center justify-center">
