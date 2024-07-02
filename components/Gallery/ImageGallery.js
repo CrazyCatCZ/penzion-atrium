@@ -1,13 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleChevronLeft,
-  faCircleChevronRight,
-  faCircleXmark,
-  faCircleArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import ImageModal from "./ImageModal";
 
 const ImageGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -61,30 +55,13 @@ const ImageGallery = ({ galleryImages }) => {
   return (
     <div>
       {openModal && (
-        <div className="fixed inset-0 z-[999] bg-black bg-opacity-80 flex items-center justify-center">
-          <FontAwesomeIcon
-            icon={faCircleXmark}
-            className="absolute top-10 right-10 text-5xl text-white cursor-pointer opacity-60 hover:opacity-100"
-            onClick={handleCloseModal}
-          />
-          <FontAwesomeIcon
-            icon={faCircleChevronLeft}
-            className="absolute sm:left-10 left-8 sm:text-5xl text-4xl text-white cursor-pointer sm:opacity-60 hover:opacity-100"
-            onClick={prevSlide}
-          />
-          <FontAwesomeIcon
-            icon={faCircleChevronRight}
-            className="absolute sm:right-10 right-8 sm:text-5xl text-4xl text-white cursor-pointer sm:opacity-60 hover:opacity-100"
-            onClick={nextSlide}
-          />
-          <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] flex items-center justify-center">
-            <Image
-              className="max-w-full max-h-full pointer-events-none select-none"
-              src={galleryImages[slideNumber].src}
-              alt={galleryImages[slideNumber].alt}
-            />
-          </div>
-        </div>
+        <ImageModal
+          galleryImages={galleryImages}
+          handleCloseModal={handleCloseModal}
+          prevSlide={prevSlide}
+          nextSlide={nextSlide}
+          slideNumber={slideNumber}
+        />
       )}
 
       <div className="flex flex-wrap gap-2.5 items-center sm:justify-start justify-center max-w-full mx-auto">
