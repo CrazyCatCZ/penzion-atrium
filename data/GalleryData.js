@@ -20,6 +20,38 @@ import {
   Room7TImage,
 } from "@/public/images/getImages";
 
+
+
+
+import {
+  Kitchen1Image,
+  Kitchen2Image,
+} from "@/public/images/getImages";
+
+
+
+import {
+  WC1Image,
+  WC2Image,
+  WC3Image,
+  WC4Image,
+  WC5Image,
+  WC6Image,
+} from "@/public/images/getImages";
+
+
+
+
+import {
+  Exterior1Image,
+  Exterior2Image,
+  Exterior3Image,
+  Exterior4Image,
+} from "@/public/images/getImages";
+
+
+
+
 const GalleryData = () => {
   const roomImages = [
     {
@@ -58,62 +90,44 @@ const GalleryData = () => {
   ];
   const kitchenImages = [
     {
-      src: TrutnovCentrumImage,
+      src: Kitchen1Image,
     },
     {
-      src: KrkonoseImage,
-    },
-    {
-      src: AdrspachImage,
-    },
-    {
-      src: KuksImage,
-    },
-    {
-      src: ZooImage,
-    },
-    {
-      src: DolceImage,
+      src: Kitchen2Image,
     },
   ];
   const outsideImages = [
     {
-      src: TrutnovCentrumImage,
+      src: Exterior1Image,
     },
     {
-      src: KrkonoseImage,
+      src: Exterior2Image,
     },
     {
-      src: AdrspachImage,
+      src: Exterior3Image,
     },
     {
-      src: KuksImage,
-    },
-    {
-      src: ZooImage,
-    },
-    {
-      src: DolceImage,
+      src: Exterior4Image,
     },
   ];
   const toiletImages = [
     {
-      src: TrutnovCentrumImage,
+      src: WC1Image,
     },
     {
-      src: KrkonoseImage,
+      src: WC2Image,
     },
     {
-      src: AdrspachImage,
+      src: WC3Image,
     },
     {
-      src: KuksImage,
+      src: WC4Image,
     },
     {
-      src: ZooImage,
+      src: WC5Image,
     },
     {
-      src: DolceImage,
+      src: WC6Image,
     },
   ];
 

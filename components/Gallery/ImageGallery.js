@@ -64,11 +64,11 @@ const ImageGallery = ({ galleryImages }) => {
         />
       )}
 
-      <div className="flex flex-wrap gap-2.5 items-center sm:justify-start justify-center max-w-full mx-auto">
+      <div className="flex flex-wrap gap-16  items-center sm:justify-start  justify-center max-w-full mx-auto">
         {galleryImages &&
           galleryImages.map((slide, index) => (
             <div
-              className="sm:w-[265px] cursor-pointer"
+              className="sm:w-[573px] cursor-pointer"
               key={index}
               onClick={() => handleOpenModal(index)}
             >
@@ -77,7 +77,7 @@ const ImageGallery = ({ galleryImages }) => {
                 width={573}
                 src={slide.src}
                 alt={slide.alt}
-                className="w-310px h-573px object-fill transition-transform duration-200 hover:scale-105"
+                className="w-[573px] h-[310px] object-cover  transition-transform duration-200 hover:scale-105"
               />
             </div>
           ))}
