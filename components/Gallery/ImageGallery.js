@@ -64,11 +64,11 @@ const ImageGallery = ({ galleryImages }) => {
         />
       )}
 
-      <div className="flex flex-wrap gap-16  items-center sm:justify-start  justify-center max-w-full mx-auto">
+      <div className="flex flex-wrap gap-2.5  items-center sm:justify-start  justify-center max-w-full mx-auto">
         {galleryImages &&
           galleryImages.map((slide, index) => (
             <div
-              className="sm:w-[573px] cursor-pointer"
+              className="sm:w-[265px] cursor-pointer"
               key={index}
               onClick={() => handleOpenModal(index)}
             >
