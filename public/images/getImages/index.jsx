@@ -52,6 +52,28 @@ export { default as Room6TImage } from "@/public/images/gallery/Rooms/6T-2.jpg";
 export { default as Room7TImage } from "@/public/images/gallery/Rooms/6T-3.jpg";
 export { default as Room8TImage } from "@/public/images/gallery/Rooms/6T-3.jpg";
 
+
+export { default as Kitchen1Image } from "@/public/images/gallery/Kitchen/20240619_154125.jpg";
+export { default as Kitchen2Image } from "@/public/images/gallery/Kitchen/20240619_160828.jpg";
+
+
+
+export { default as WC1Image } from "@/public/images/gallery/WC/20240619_153549.jpg";
+export { default as WC2Image } from "@/public/images/gallery/WC/20240619_154318.jpg";
+export { default as WC3Image } from "@/public/images/gallery/WC/20240619_154331.jpg";
+export { default as WC4Image } from "@/public/images/gallery/WC/20240619_161844.jpg";
+export { default as WC5Image } from "@/public/images/gallery/WC/20240619_162044.jpg";
+export { default as WC6Image } from "@/public/images/gallery/WC/20240619_162055.jpg";
+
+
+
+export { default as Exterior1Image } from "@/public/images/gallery/Exterier/20240619_154901.jpg";
+export { default as Exterior2Image } from "@/public/images/gallery/Exterier/20240619_155515.jpg";
+export { default as Exterior3Image } from "@/public/images/gallery/Exterier/20240619_160136.jpg";
+export { default as Exterior4Image } from "@/public/images/gallery/Exterier/20240619_160324.jpg";
+
+
+
 export { default as MeetingRoomImage } from "@/public/images/gallery/Services/meeting_room.png";
 export { default as MeetingRoomResponsiveImage } from "@/public/images/gallery/Services/meeting_room_responsive.png";
 export { default as KomendaImage } from "@/public/images/gallery/Services/komenda.png";
