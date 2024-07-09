@@ -33,7 +33,7 @@ const ImageModal = ({
       />
       <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] flex items-center justify-center">
         <Image
-          className="max-w-full max-h-full pointer-events-none select-none"
+          className="max-w-[573px] max-h-[310px] h-full pointer-events-none select-none"
           src={galleryImages[slideNumber].src}
           alt={galleryImages[slideNumber].alt}
         />
