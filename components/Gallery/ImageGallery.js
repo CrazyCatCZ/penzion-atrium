@@ -73,9 +73,11 @@ const ImageGallery = ({ galleryImages }) => {
               onClick={() => handleOpenModal(index)}
             >
               <Image
+                height={310}
+                width={573}
                 src={slide.src}
                 alt={slide.alt}
-                className="max-w-full transition-transform duration-200 hover:scale-105"
+                className="w-310px h-573px object-fill transition-transform duration-200 hover:scale-105"
               />
             </div>
           ))}

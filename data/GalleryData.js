@@ -7,6 +7,7 @@ import {
   DolceImage,
 } from "@/public/images/getImages";
 import {
+  Room1TImage,
   Room1SImage,
   Room2TImage,
   Room2SImage,
@@ -17,8 +18,6 @@ import {
   Room5TImage,
   Room6TImage,
   Room7TImage,
-  Room8TImage,
-  Room1TImage,
 } from "@/public/images/getImages";
 
 const GalleryData = () => {
@@ -55,9 +54,6 @@ const GalleryData = () => {
     },
     {
       src: Room7TImage,
-    },
-    {
-      src: Room8TImage,
     },
   ];
   const kitchenImages = [
