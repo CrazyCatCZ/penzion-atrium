@@ -1,36 +1,63 @@
 import {
   TrutnovCentrumImage,
-  TrutnovCentrumResponsiveImage,
   KrkonoseImage,
-  KrkonoseResponsiveImage,
   AdrspachImage,
-  AdrspachResponsiveImage,
   KuksImage,
-  KuksResponsiveImage,
   ZooImage,
-  ZooResponsiveImage,
   DolceImage,
+} from "@/public/images/getImages";
+import {
+  Room1SImage,
+  Room2TImage,
+  Room2SImage,
+  Room3TImage,
+  Room3TImage2,
+  Room4TImage,
+  Room4SImage,
+  Room5TImage,
+  Room6TImage,
+  Room7TImage,
+  Room8TImage,
+  Room1TImage,
 } from "@/public/images/getImages";
 
 const GalleryData = () => {
   const roomImages = [
     {
-      src: TrutnovCentrumImage,
+      src: Room1TImage,
     },
     {
-      src: TrutnovCentrumImage,
+      src: Room1SImage,
     },
     {
-      src: TrutnovCentrumImage,
+      src: Room2TImage,
     },
     {
-      src: TrutnovCentrumImage,
+      src: Room2SImage,
     },
     {
-      src: TrutnovCentrumImage,
+      src: Room3TImage,
     },
     {
-      src: TrutnovCentrumImage,
+      src: Room3TImage2,
+    },
+    {
+      src: Room4TImage,
+    },
+    {
+      src: Room4SImage,
+    },
+    {
+      src: Room5TImage,
+    },
+    {
+      src: Room6TImage,
+    },
+    {
+      src: Room7TImage,
+    },
+    {
+      src: Room8TImage,
     },
   ];
   const kitchenImages = [

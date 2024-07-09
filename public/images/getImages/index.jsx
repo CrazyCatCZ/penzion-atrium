@@ -39,14 +39,18 @@ export { default as LaundryIcon } from "@/public/images/vectors/laundry.png";
 export { default as ImageIcon } from "@/public/images/vectors/icon_image.png";
 export { default as ProfileIcon } from "@/public/images/vectors/profile.png";
 
-export { default as Room1Image } from "@/public/images/gallery/1room.jpg";
-export { default as Room2Image } from "@/public/images/gallery/2room.jpg";
-export { default as Room3Image } from "@/public/images/gallery/3room.jpg";
-export { default as Room4Image } from "@/public/images/gallery/4room.jpg";
-export { default as Room5Image } from "@/public/images/gallery/5room.jpg";
-export { default as Room6Image } from "@/public/images/gallery/6room.jpg";
-export { default as Room7Image } from "@/public/images/gallery/7room.jpg";
-export { default as Room8Image } from "@/public/images/gallery/8room.jpg";
+export { default as Room1TImage } from "@/public/images/gallery/Rooms/1T.jpg";
+export { default as Room1SImage } from "@/public/images/gallery/Rooms/1S.jpg";
+export { default as Room2TImage } from "@/public/images/gallery/Rooms/2T.jpg";
+export { default as Room2SImage } from "@/public/images/gallery/Rooms/2S.jpg";
+export { default as Room3TImage } from "@/public/images/gallery/Rooms/3T.jpg";
+export { default as Room3TImage2 } from "@/public/images/gallery/Rooms/3T-2.jpg";
+export { default as Room4TImage } from "@/public/images/gallery/Rooms/4T.jpg";
+export { default as Room4SImage } from "@/public/images/gallery/Rooms/4S.jpg";
+export { default as Room5TImage } from "@/public/images/gallery/Rooms/6T.jpg";
+export { default as Room6TImage } from "@/public/images/gallery/Rooms/6T-2.jpg";
+export { default as Room7TImage } from "@/public/images/gallery/Rooms/6T-3.jpg";
+export { default as Room8TImage } from "@/public/images/gallery/Rooms/6T-3.jpg";
 
 export { default as MeetingRoomImage } from "@/public/images/gallery/Services/meeting_room.png";
 export { default as MeetingRoomResponsiveImage } from "@/public/images/gallery/Services/meeting_room_responsive.png";
