@@ -1,12 +1,4 @@
 import {
-  TrutnovCentrumImage,
-  KrkonoseImage,
-  AdrspachImage,
-  KuksImage,
-  ZooImage,
-  DolceImage,
-} from "@/public/images/getImages";
-import {
   Room1TImage,
   Room1SImage,
   Room2TImage,
@@ -20,15 +12,10 @@ import {
   Room7TImage,
 } from "@/public/images/getImages";
 
-
-
-
 import {
-  Kitchen1Image,
-  Kitchen2Image,
+  BottomKitchenImage,
+  UpperKitchenImage,
 } from "@/public/images/getImages";
-
-
 
 import {
   WC1Image,
@@ -39,18 +26,12 @@ import {
   WC6Image,
 } from "@/public/images/getImages";
 
-
-
-
 import {
-  Exterior1Image,
-  Exterior2Image,
-  Exterior3Image,
-  Exterior4Image,
+  FrontImage,
+  FrontMainImage,
+  PlaygroundImage,
+  EntranceImage,
 } from "@/public/images/getImages";
-
-
-
 
 const GalleryData = () => {
   const roomImages = [
@@ -88,28 +69,31 @@ const GalleryData = () => {
       src: Room7TImage,
     },
   ];
+
   const kitchenImages = [
     {
-      src: Kitchen1Image,
+      src: BottomKitchenImage,
     },
     {
-      src: Kitchen2Image,
+      src: UpperKitchenImage,
     },
   ];
+
   const outsideImages = [
     {
-      src: Exterior1Image,
+      src: FrontImage,
     },
     {
-      src: Exterior2Image,
+      src: FrontMainImage,
     },
     {
-      src: Exterior3Image,
+      src: PlaygroundImage,
     },
     {
-      src: Exterior4Image,
+      src: EntranceImage,
     },
   ];
+
   const toiletImages = [
     {
       src: WC1Image,

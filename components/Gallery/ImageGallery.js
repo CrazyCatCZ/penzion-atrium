@@ -77,7 +77,7 @@ const ImageGallery = ({ galleryImages }) => {
                 width={573}
                 src={slide.src}
                 alt={slide.alt}
-                className="w-[573px] h-[310px] object-cover  transition-transform duration-200 hover:scale-105"
+                className="w-[573px] h-[150px] object-cover  transition-transform duration-200 hover:scale-105"
               />
             </div>
           ))}
