@@ -22,7 +22,7 @@ export { default as MenuIcon } from "@/public/images/vectors/menu.png";
 export { default as USFlagIcon } from "@/public/images/vectors/usa_flag.png";
 export { default as CzechFlagIcon } from "@/public/images/vectors/czech_flag.png";
 
-export { default as CardImage } from "@/public/images/gallery/Home/card.png";
+export { default as CardImage } from "@/public/images/gallery/Home/card.webp";
 export { default as HomeImage1 } from "@/public/images/gallery/Home/1-home.png";
 export { default as HomeImage2 } from "@/public/images/gallery/Home/2-home.png";
 export { default as HomeImage3 } from "@/public/images/gallery/Home/3-home.png";
