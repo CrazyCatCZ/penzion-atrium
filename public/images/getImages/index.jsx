@@ -39,33 +39,33 @@ export { default as LaundryIcon } from "@/public/images/vectors/laundry.png";
 export { default as ImageIcon } from "@/public/images/vectors/icon_image.png";
 export { default as ProfileIcon } from "@/public/images/vectors/profile.png";
 
-export { default as Room1TImage } from "@/public/images/gallery/Rooms/1T.jpg";
-export { default as Room1SImage } from "@/public/images/gallery/Rooms/1S.jpg";
-export { default as Room2TImage } from "@/public/images/gallery/Rooms/2T.jpg";
-export { default as Room2SImage } from "@/public/images/gallery/Rooms/2S.jpg";
-export { default as Room3TImage } from "@/public/images/gallery/Rooms/3T.jpg";
-export { default as Room3TImage2 } from "@/public/images/gallery/Rooms/3T-2.jpg";
-export { default as Room4TImage } from "@/public/images/gallery/Rooms/4T.jpg";
-export { default as Room4SImage } from "@/public/images/gallery/Rooms/4S.jpg";
-export { default as Room5TImage } from "@/public/images/gallery/Rooms/6T.jpg";
-export { default as Room6TImage } from "@/public/images/gallery/Rooms/6T-2.jpg";
-export { default as Room7TImage } from "@/public/images/gallery/Rooms/6T-3.jpg";
-export { default as Room8TImage } from "@/public/images/gallery/Rooms/6T-3.jpg";
+export { default as Room1TImage } from "@/public/images/gallery/Rooms/1T.webp";
+export { default as Room1SImage } from "@/public/images/gallery/Rooms/1S.webp";
+export { default as Room2TImage } from "@/public/images/gallery/Rooms/2T.webp";
+export { default as Room2SImage } from "@/public/images/gallery/Rooms/2S.webp";
+export { default as Room3TImage } from "@/public/images/gallery/Rooms/3T.webp";
+export { default as Room3TImage2 } from "@/public/images/gallery/Rooms/3T-2.webp";
+export { default as Room4TImage } from "@/public/images/gallery/Rooms/4T.webp";
+export { default as Room4SImage } from "@/public/images/gallery/Rooms/4S.webp";
+export { default as Room5TImage } from "@/public/images/gallery/Rooms/6T.webp";
+export { default as Room6TImage } from "@/public/images/gallery/Rooms/6T-2.webp";
+export { default as Room7TImage } from "@/public/images/gallery/Rooms/6T-3.webp";
+export { default as Room8TImage } from "@/public/images/gallery/Rooms/6T-3.webp";
 
-export { default as BottomKitchenImage } from "@/public/images/gallery/Kitchen/bottom_kitchen.jpg";
-export { default as UpperKitchenImage } from "@/public/images/gallery/Kitchen/upper_kitchen.jpg";
+export { default as BottomKitchenImage } from "@/public/images/gallery/Kitchen/bottom_kitchen.webp";
+export { default as UpperKitchenImage } from "@/public/images/gallery/Kitchen/upper_kitchen.webp";
 
-export { default as WC1Image } from "@/public/images/gallery/WC/20240619_153549.jpg";
-export { default as WC2Image } from "@/public/images/gallery/WC/20240619_154318.jpg";
-export { default as WC3Image } from "@/public/images/gallery/WC/20240619_154331.jpg";
-export { default as WC4Image } from "@/public/images/gallery/WC/20240619_161844.jpg";
-export { default as WC5Image } from "@/public/images/gallery/WC/20240619_162044.jpg";
-export { default as WC6Image } from "@/public/images/gallery/WC/20240619_162055.jpg";
+export { default as WC1Image } from "@/public/images/gallery/WC/20240619_153549.webp";
+export { default as WC2Image } from "@/public/images/gallery/WC/20240619_154318.webp";
+export { default as WC3Image } from "@/public/images/gallery/WC/20240619_154331.webp";
+export { default as WC4Image } from "@/public/images/gallery/WC/20240619_161844.webp";
+export { default as WC5Image } from "@/public/images/gallery/WC/20240619_162044.webp";
+export { default as WC6Image } from "@/public/images/gallery/WC/20240619_162055.webp";
 
-export { default as FrontImage } from "@/public/images/gallery/Exterier/front.jpg";
-export { default as FrontMainImage } from "@/public/images/gallery/Exterier/front-main.jpg";
-export { default as PlaygroundImage } from "@/public/images/gallery/Exterier/playground.jpg";
-export { default as EntranceImage } from "@/public/images/gallery/Exterier/entrance.jpg";
+export { default as FrontImage } from "@/public/images/gallery/Exterier/front.webp";
+export { default as FrontMainImage } from "@/public/images/gallery/Exterier/front-main.webp";
+export { default as PlaygroundImage } from "@/public/images/gallery/Exterier/playground.webp";
+export { default as EntranceImage } from "@/public/images/gallery/Exterier/entrance.webp";
 
 export { default as MeetingRoomImage } from "@/public/images/gallery/Services/meeting_room.png";
 export { default as MeetingRoomResponsiveImage } from "@/public/images/gallery/Services/meeting_room_responsive.png";
