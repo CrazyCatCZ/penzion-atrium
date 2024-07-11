@@ -6,7 +6,7 @@ const ImageGrid = () => {
   const { images } = HomeData();
 
   return (
-    <div className="grid grid-cols-1 grid-cols-2 lg:grid-cols-4 container lg:py-7">
+    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container lg:py-7">
       {images.map((item, index) => (
         <MotionDiv
           key={index}
@@ -14,16 +14,16 @@ const ImageGrid = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 + index * 0.15, ease: "easeInOut" }}
         >
-          <ImageEffect
-            img={item.image.src}
-            imgAlt={item.alt}
-            divClass={"relative w-full h-full"}
-            imgClass={"w-full h-50 rounded"}
-            iconClass={"w-7 h-7 sm:w-10 sm:h-10"}
-            iconDivClass={
-              "absolute bottom-4 right-4 sm:bottom-9 sm:right-9 md:bottom-8 md:right-8 lg:bottom-7 lg:right-7"
-            }
-          />
+          <div className="relative w-full h-40 md:h-48 lg:h-56">
+            <ImageEffect
+              img={item.image.src}
+              imgAlt={item.alt}
+              divClass={"relative w-full h-full"}
+              imgClass={"object-cover w-full h-full rounded"}
+              iconClass={"w-7 h-7 sm:w-10 sm:h-10"}
+              iconDivClass={"absolute bottom-4 right-4"}
+            />
+          </div>
         </MotionDiv>
       ))}
     </div>
