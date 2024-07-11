@@ -6,7 +6,7 @@ const ImageGrid = () => {
   const { images } = HomeData();
 
   return (
-    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container lg:py-7">
+    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container lg:py-7">
       {images.map((item, index) => (
         <MotionDiv
           key={index}
@@ -19,9 +19,9 @@ const ImageGrid = () => {
               img={item.image.src}
               imgAlt={item.alt}
               divClass={"relative w-full h-full"}
-              imgClass={"object-cover w-full h-full rounded"}
-              iconClass={"w-7 h-7 sm:w-10 sm:h-10"}
-              iconDivClass={"absolute bottom-4 right-4"}
+              imgClass={"rounded-xl object-cover w-full h-full rounded"}
+              iconClass={"w-9 h-9 sm:w-10 sm:h-10"}
+              iconDivClass={"text-xl absolute bottom-2 right-2"}
             />
           </div>
         </MotionDiv>

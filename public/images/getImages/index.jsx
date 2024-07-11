@@ -23,10 +23,10 @@ export { default as USFlagIcon } from "@/public/images/vectors/usa_flag.png";
 export { default as CzechFlagIcon } from "@/public/images/vectors/czech_flag.png";
 
 export { default as CardImage } from "@/public/images/gallery/Home/card.webp";
-export { default as HomeImage1 } from "@/public/images/gallery/Home/1-home.jpg";
-export { default as HomeImage2 } from "@/public/images/gallery/Home/2-home.jpg";
-export { default as HomeImage3 } from "@/public/images/gallery/Home/3-home.jpg";
-export { default as HomeImage4 } from "@/public/images/gallery/Home/4-home.jpg";
+export { default as HomeImage1 } from "@/public/images/gallery/Home/1-home.webp";
+export { default as HomeImage2 } from "@/public/images/gallery/Home/2-home.webp";
+export { default as HomeImage3 } from "@/public/images/gallery/Home/3-home.webp";
+export { default as HomeImage4 } from "@/public/images/gallery/Home/4-home.webp";
 
 export { default as ShowerIcon } from "@/public/images/vectors/shower.png";
 export { default as TV2Icon } from "@/public/images/vectors/tv2.png";
