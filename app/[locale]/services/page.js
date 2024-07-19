@@ -13,7 +13,7 @@ const Page = () => {
       <h1 className="md:text-5xl text-4xl font-bold mb-16 lg:mb-14 text-center">
         {tServices("title")}
       </h1>
-      <div className="space-y-12">
+      <div className="mb-10 space-y-12">
         <MealsComponent />
         <Sports />
         <SkiComponent />
