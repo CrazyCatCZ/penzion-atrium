@@ -1,24 +1,31 @@
 "use client";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Image from "next/image";
 import ImageModal from "./ImageModal";
+import GalleryData from "@/data/GalleryData";
 
 const ImageGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const documentRef = useRef(typeof document !== "undefined" ? document : null);
 
+  const { roomImages, kitchenImages, outsideImages, toiletImages } =
+    GalleryData();
+
+  const allImages = [
+    ...roomImages,
+    ...kitchenImages,
+    ...outsideImages,
+    ...toiletImages,
+  ];
+
   const prevSlide = useCallback(() => {
-    setSlideNumber((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1
-    );
-  }, [galleryImages]);
+    setSlideNumber((prev) => (prev === 0 ? allImages.length - 1 : prev - 1));
+  }, [allImages]);
 
   const nextSlide = useCallback(() => {
-    setSlideNumber((prev) =>
-      prev + 1 === galleryImages.length ? 0 : prev + 1
-    );
-  }, [galleryImages]);
+    setSlideNumber((prev) => (prev + 1 === allImages.length ? 0 : prev + 1));
+  }, [allImages]);
 
   const handleOpenModal = (index) => {
     setSlideNumber(index);
@@ -56,7 +63,7 @@ const ImageGallery = ({ galleryImages }) => {
     <div>
       {openModal && (
         <ImageModal
-          galleryImages={galleryImages}
+          allImages={allImages}
           handleCloseModal={handleCloseModal}
           prevSlide={prevSlide}
           nextSlide={nextSlide}
@@ -66,11 +73,11 @@ const ImageGallery = ({ galleryImages }) => {
 
       <div className="flex flex-wrap gap-2.5  items-center sm:justify-start  justify-center max-w-full mx-auto">
         {galleryImages &&
-          galleryImages.map((slide, index) => (
+          galleryImages.map((slide) => (
             <div
               className="sm:w-[265px] cursor-pointer"
-              key={index}
-              onClick={() => handleOpenModal(index)}
+              key={slide.index}
+              onClick={() => handleOpenModal(slide.index)}
             >
               <Image
                 height={310}

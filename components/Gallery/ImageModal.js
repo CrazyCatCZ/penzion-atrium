@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ImageModal = ({
-  galleryImages,
+  allImages,
   handleCloseModal,
   prevSlide,
   nextSlide,
@@ -34,8 +34,8 @@ const ImageModal = ({
       <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] flex items-center justify-center">
         <Image
           className="object-contain h-full pointer-events-none select-none"
-          src={galleryImages[slideNumber].src}
-          alt={galleryImages[slideNumber].alt}
+          src={allImages[slideNumber].src}
+          alt={allImages[slideNumber].alt}
         />
       </div>
     </div>
