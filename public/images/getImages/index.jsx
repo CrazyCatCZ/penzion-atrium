@@ -67,8 +67,8 @@ export { default as FrontMainImage } from "@/public/images/gallery/Exterier/fron
 export { default as PlaygroundImage } from "@/public/images/gallery/Exterier/playground.webp";
 export { default as EntranceImage } from "@/public/images/gallery/Exterier/entrance.webp";
 
-export { default as MeetingRoomImage } from "@/public/images/gallery/Services/meeting_room.png";
-export { default as KomendaImage } from "@/public/images/gallery/Services/komenda.png";
+export { default as MeetingRoomImage } from "@/public/images/gallery/Services/meeting_room.webp";
+export { default as KomendaImage } from "@/public/images/gallery/Services/komenda.webp";
 export { default as SkiImage } from "@/public/images/gallery/Services/ski.webp";
 
 export { default as GymnasticHallIcon } from "@/public/images/vectors/gymnastic_hall.png";
@@ -83,9 +83,9 @@ export { default as MultipurposeCourtIcon } from "@/public/images/vectors/multip
 export { default as AthleticStadiumIcon } from "@/public/images/vectors/athletic_stadium.png";
 export { default as MultipurposeGymIcon } from "@/public/images/vectors/multipurpose_gym.png";
 
-export { default as TrutnovCentrumImage } from "@/public/images/gallery/Surrondings/trutnov_centrum.png";
-export { default as KrkonoseImage } from "@/public/images/gallery/Surrondings/krkonose.png";
+export { default as TrutnovCentrumImage } from "@/public/images/gallery/Surrondings/trutnov_centrum.webp";
+export { default as KrkonoseImage } from "@/public/images/gallery/Surrondings/krkonose.webp";
 export { default as KuksImage } from "@/public/images/gallery/Surrondings/kuks.webp";
-export { default as AdrspachImage } from "@/public/images/gallery/Surrondings/adrspach.png";
-export { default as ZooImage } from "@/public/images/gallery/Surrondings/zoo.png";
-export { default as DolceImage } from "@/public/images/gallery/Surrondings/dolce.png";
+export { default as AdrspachImage } from "@/public/images/gallery/Surrondings/adrspach.webp";
+export { default as ZooImage } from "@/public/images/gallery/Surrondings/zoo.webp";
+export { default as DolceImage } from "@/public/images/gallery/Surrondings/dolce.webp";

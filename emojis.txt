@@ -3,3 +3,4 @@ style -  🎨️
 bug solved - 🐞✅
 edited - ✍
 package - 📦
+removed - ❌
