@@ -1,14 +1,7 @@
 import Link from "next/link";
 import ImageEffect from "@/components/Other/ImageEffect";
 
-const SurroundingElement = ({
-  reverse,
-  small_img,
-  large_img,
-  heading,
-  text,
-  link,
-}) => {
+const SurroundingElement = ({ reverse, large_img, heading, text, link }) => {
   const flexDirectionClass = reverse
     ? "flex-col lg:flex-row-reverse"
     : " lg:flex-row flex-col";

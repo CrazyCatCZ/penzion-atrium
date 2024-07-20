@@ -68,11 +68,8 @@ export { default as PlaygroundImage } from "@/public/images/gallery/Exterier/pla
 export { default as EntranceImage } from "@/public/images/gallery/Exterier/entrance.webp";
 
 export { default as MeetingRoomImage } from "@/public/images/gallery/Services/meeting_room.png";
-export { default as MeetingRoomResponsiveImage } from "@/public/images/gallery/Services/meeting_room_responsive.png";
 export { default as KomendaImage } from "@/public/images/gallery/Services/komenda.png";
-export { default as KomendaResponsiveImage } from "@/public/images/gallery/Services/komenda_responsive.png";
 export { default as SkiImage } from "@/public/images/gallery/Services/ski.webp";
-export { default as SkiResponsiveImage } from "@/public/images/gallery/Services/ski_responsive.png";
 
 export { default as GymnasticHallIcon } from "@/public/images/vectors/gymnastic_hall.png";
 export { default as BeachIcon } from "@/public/images/vectors/beach.png";
@@ -87,13 +84,8 @@ export { default as AthleticStadiumIcon } from "@/public/images/vectors/athletic
 export { default as MultipurposeGymIcon } from "@/public/images/vectors/multipurpose_gym.png";
 
 export { default as TrutnovCentrumImage } from "@/public/images/gallery/Surrondings/trutnov_centrum.png";
-export { default as TrutnovCentrumResponsiveImage } from "@/public/images/gallery/Surrondings/trutnov_centrum_responsive.png";
 export { default as KrkonoseImage } from "@/public/images/gallery/Surrondings/krkonose.png";
-export { default as KrkonoseResponsiveImage } from "@/public/images/gallery/Surrondings/krkonose_responsive.png";
 export { default as KuksImage } from "@/public/images/gallery/Surrondings/kuks.webp";
-export { default as KuksResponsiveImage } from "@/public/images/gallery/Surrondings/kuks_responsive.png";
 export { default as AdrspachImage } from "@/public/images/gallery/Surrondings/adrspach.png";
-export { default as AdrspachResponsiveImage } from "@/public/images/gallery/Surrondings/adrspach_responsive.png";
 export { default as ZooImage } from "@/public/images/gallery/Surrondings/zoo.png";
-export { default as ZooResponsiveImage } from "@/public/images/gallery/Surrondings/zoo_responsive.png";
 export { default as DolceImage } from "@/public/images/gallery/Surrondings/dolce.png";
