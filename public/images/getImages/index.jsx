@@ -71,7 +71,7 @@ export { default as MeetingRoomImage } from "@/public/images/gallery/Services/me
 export { default as MeetingRoomResponsiveImage } from "@/public/images/gallery/Services/meeting_room_responsive.png";
 export { default as KomendaImage } from "@/public/images/gallery/Services/komenda.png";
 export { default as KomendaResponsiveImage } from "@/public/images/gallery/Services/komenda_responsive.png";
-export { default as SkiImage } from "@/public/images/gallery/Services/ski.png";
+export { default as SkiImage } from "@/public/images/gallery/Services/ski.webp";
 export { default as SkiResponsiveImage } from "@/public/images/gallery/Services/ski_responsive.png";
 
 export { default as GymnasticHallIcon } from "@/public/images/vectors/gymnastic_hall.png";
@@ -90,7 +90,7 @@ export { default as TrutnovCentrumImage } from "@/public/images/gallery/Surrondi
 export { default as TrutnovCentrumResponsiveImage } from "@/public/images/gallery/Surrondings/trutnov_centrum_responsive.png";
 export { default as KrkonoseImage } from "@/public/images/gallery/Surrondings/krkonose.png";
 export { default as KrkonoseResponsiveImage } from "@/public/images/gallery/Surrondings/krkonose_responsive.png";
-export { default as KuksImage } from "@/public/images/gallery/Surrondings/kuks.png";
+export { default as KuksImage } from "@/public/images/gallery/Surrondings/kuks.webp";
 export { default as KuksResponsiveImage } from "@/public/images/gallery/Surrondings/kuks_responsive.png";
 export { default as AdrspachImage } from "@/public/images/gallery/Surrondings/adrspach.png";
 export { default as AdrspachResponsiveImage } from "@/public/images/gallery/Surrondings/adrspach_responsive.png";
