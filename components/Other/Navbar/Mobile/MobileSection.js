@@ -34,8 +34,7 @@ const MobileSection = ({ tNavbar }) => {
               opacity: 0,
             }}
           >
-            <div className="mx-auto w-full max-w-[302px] flex flex-col gap-16">
-              <MobileLinks setIsMenuOpen={setIsMenuOpen} tNavbar={tNavbar} />
+            <div className="mx-auto w-full max-w-[302px] flex flex-col gap-2">
               <div className="space-y-4">
                 {/* Language Dropdown */}
                 <LanguageSwitcher
@@ -51,6 +50,7 @@ const MobileSection = ({ tNavbar }) => {
                 />
               */}
               </div>
+              <MobileLinks setIsMenuOpen={setIsMenuOpen} tNavbar={tNavbar} />
             </div>
           </motion.div>
         ) : null}
