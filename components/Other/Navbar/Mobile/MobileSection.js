@@ -34,7 +34,7 @@ const MobileSection = ({ tNavbar }) => {
               opacity: 0,
             }}
           >
-            <div className="mx-auto w-full max-w-[302px] flex flex-col gap-2">
+            <div className="mx-auto w-full max-w-[302px] flex flex-col gap-3">
               <div className="space-y-4">
                 {/* Language Dropdown */}
                 <LanguageSwitcher

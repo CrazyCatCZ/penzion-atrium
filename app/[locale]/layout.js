@@ -4,9 +4,10 @@ import Script from "next/script";
 import { cookies } from "next/headers";
 import { useTranslations } from "next-intl";
 import { redirect } from "next/navigation";
-import { Cookie, Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import IconLanguageSwitcher from "@/components/Other/IconLanguageSwitcher";
 
 import { locales } from "@/navigation";
 import { Providers } from "./providers";
@@ -74,6 +75,7 @@ export default function RootLayout({ children, params: { locale } }) {
         <Providers>
           <Navbar />
           {children}
+          <IconLanguageSwitcher />
           <Footer />
           <CookieConsent
             translation={{
