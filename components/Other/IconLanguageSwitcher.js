@@ -1,10 +1,27 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CzechFlag, USFlag } from "@/public/vectors/getIcons";
 
 const IconLanguageSwitcher = () => {
   const [expanded, setExpanded] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 3) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
@@ -17,7 +34,11 @@ const IconLanguageSwitcher = () => {
   };
 
   return (
-    <div className="fixed bottom-40 left-4 z-40">
+    <div
+      className={`fixed bottom-40 left-4 z-40 transition-opacity duration-300 ${
+        hidden ? "opacity-0 pointer-events-none" : ""
+      }`}
+    >
       {expanded && (
         <div className="mb-3 flex flex-col gap-2">
           <div
@@ -36,7 +57,7 @@ const IconLanguageSwitcher = () => {
         <Image
           className="border-2 border-indigo-900 rounded-full w-full h-full"
           src={CzechFlag}
-          alt="Italian"
+          alt="Czech"
         />
       </div>
     </div>
