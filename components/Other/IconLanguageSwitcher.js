@@ -1,11 +1,27 @@
 "use client";
-import Image from "next/image";
 import { useState, useEffect } from "react";
-import { CzechFlag, USFlag } from "@/public/vectors/getIcons";
+
+import Image from "next/image";
+import { useLocale } from "next-intl";
+import NavbarData from "@/data/NavbarData";
+import { useRouter, usePathname } from "@/navigation";
 
 const IconLanguageSwitcher = () => {
-  const [expanded, setExpanded] = useState(false);
+  const locale = useLocale();
+  const router = useRouter();
+  const pathName = usePathname();
+
   const [hidden, setHidden] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  const { languagesDesktop } = NavbarData();
+
+  const currentLanguage = languagesDesktop.filter(
+    (language) => language.code === locale
+  );
+  const otherLanguages = languagesDesktop.filter(
+    (language) => language.code !== locale
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,9 +44,7 @@ const IconLanguageSwitcher = () => {
   };
 
   const switchLanguage = (language) => {
-    // Implement your language switching logic here
-    console.log(`Language switched to: ${language}`);
-    // You may want to store the selected language in local storage or cookies
+    router.push(pathName, { locale: language });
   };
 
   return (
@@ -40,24 +54,28 @@ const IconLanguageSwitcher = () => {
       }`}
     >
       {expanded && (
-        <div className="mb-3 flex flex-col gap-2">
-          <div
-            className="w-11 h-11 cursor-pointer"
-            onClick={() => switchLanguage("en")}
-          >
-            <Image
-              src={USFlag}
-              alt="English"
-              className="rounded-full border-2 border-indigo-900 w-full h-full"
-            />
-          </div>
-        </div>
+        <>
+          {otherLanguages.map((language, i) => (
+            <div key={i} className="mb-3 flex flex-col gap-2">
+              <div
+                className="w-11 h-11 cursor-pointer"
+                onClick={() => switchLanguage(language.code)}
+              >
+                <Image
+                  src={language.icon}
+                  alt={language.name}
+                  className="rounded-full border-2 border-indigo-900 w-full h-full"
+                />
+              </div>
+            </div>
+          ))}
+        </>
       )}
       <div className="w-11 h-11 cursor-pointer" onClick={toggleExpanded}>
         <Image
           className="border-2 border-indigo-900 rounded-full w-full h-full"
-          src={CzechFlag}
-          alt="Czech"
+          src={currentLanguage[0].icon}
+          alt={currentLanguage[0].name}
         />
       </div>
     </div>

@@ -18,6 +18,7 @@ const LanguageSwitcher = ({ closeMenu, triggerClassName }) => {
   const { languagesDesktop } = NavbarData();
 
   const handleLanguageChange = (value) => {
+    console.log(value);
     try {
       closeMenu();
     } catch {
