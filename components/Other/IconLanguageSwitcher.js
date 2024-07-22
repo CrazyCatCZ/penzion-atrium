@@ -49,7 +49,7 @@ const IconLanguageSwitcher = () => {
 
   return (
     <div
-      className={`fixed bottom-40 left-4 z-40 transition-opacity duration-300 ${
+      className={`lg:hidden fixed bottom-40 left-4 z-40 transition-opacity duration-300 ${
         hidden ? "opacity-0 pointer-events-none" : ""
       }`}
     >
